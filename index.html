@@ -1,281 +1,367 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVQuote - Professional EV Charger Installation</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>EVCharge Pro - Professional EV Charger Installation</title>
+    <link rel="stylesheet" href="styling.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-            <!-- Header -->
+    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="logo-section">
-                <div class="logo">EVQuote</div>
-                <div class="logo-subtitle">Professional Installation</div>
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo" onclick="scrollToTop()">
+                    <div class="logo-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>EVCharge Pro</h1>
+                        <p>Professional Installation</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#quote" class="nav-link">Get Quote</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="cta-desktop">
+                    <button class="btn-primary" onclick="showQuoteAlert()">Get Free Quote</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-btn">
+                    <button onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" id="menu-icon"></i>
+                        <i data-lucide="x" id="close-icon" style="display: none;"></i>
+                    </button>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#features">Why Choose Us</a>
-                <a href="#benefits">Benefits</a>
-                <a href="#quote-form" class="nav-button">Get Free Quote →</a>
+
+            <!-- Mobile Navigation -->
+            <div class="nav-mobile" id="mobile-nav">
+                <div class="mobile-nav-content">
+                    <a href="#home" class="mobile-nav-link active">Home</a>
+                    <a href="#quote" class="mobile-nav-link">Get Quote</a>
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                    <button class="btn-primary mobile-cta" onclick="showQuoteAlert()">Get Free Quote</button>
+                </div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content text-center">
-                <h1 class="hero-title">
-                    Professional EV Charger
-                    <span class="text-blue-600">Installation</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Get a custom quote for your electric vehicle charging station. 
-                    Professional installation, premium equipment, and exceptional service.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#quote-form" class="btn-primary">
-                        Get Free Quote
-                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                    </a>
-                    <a href="#features" class="btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Grid -->
-    <section class="statistics">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon-wrapper">
-                        <i data-lucide="pound-sterling" class="w-8 h-8 text-green-600"></i>
-                    </div>
-                    <h3 class="stat-value text-green-600">£350</h3>
-                    <h4 class="stat-label">OZEV Grant Available</h4>
-                    <p class="stat-description">For qualified homeowners</p>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon-wrapper">
-                        <i data-lucide="leaf" class="w-8 h-8 text-green-600"></i>
-                    </div>
-                    <h3 class="stat-value text-green-600">60%</h3>
-                    <h4 class="stat-label">Average Savings</h4>
-                    <p class="stat-description">Compared to public charging</p>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon-wrapper">
-                        <i data-lucide="clock" class="w-8 h-8 text-blue-600"></i>
-                    </div>
-                    <h3 class="stat-value text-blue-600">2-4 Weeks</h3>
-                    <h4 class="stat-label">Installation Timeline</h4>
-                    <p class="stat-description">From quote to completion</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Grid -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="features-header text-center">
-                <h2 class="features-title">Why Choose EVQuote?</h2>
-                <p class="features-subtitle">
-                    Professional installation services with premium equipment and exceptional customer support.
-                </p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="shield" class="w-6 h-6 text-blue-600"></i>
-                    </div>
-                    <h3 class="feature-title">Certified Installation</h3>
-                    <p class="feature-description">OZEV-certified electricians with EV charging expertise and full insurance coverage.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="wrench" class="w-6 h-6 text-blue-600"></i>
-                    </div>
-                    <h3 class="feature-title">Professional Service</h3>
-                    <p class="feature-description">Complete installation including permits, inspections, and warranty support.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="zap" class="w-6 h-6 text-blue-600"></i>
-                    </div>
-                    <h3 class="feature-title">Smart Technology</h3>
-                    <p class="feature-description">WiFi-enabled chargers with mobile app control and energy monitoring.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <i data-lucide="star" class="w-6 h-6 text-blue-600"></i>
-                    </div>
-                    <h3 class="feature-title">Quality Equipment</h3>
-                    <p class="feature-description">Premium charging stations from trusted manufacturers with extended warranties.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <div class="benefits-content">
-                <div class="benefits-text">
-                    <h2 class="benefits-title">
-                        Transform Your Home with
-                        <span class="text-green-600">EV Charging</span>
-                    </h2>
-                    <p class="benefits-description">
-                        Join thousands of homeowners who have made the switch to convenient, 
-                        cost-effective home charging. Our professional installation ensures 
-                        safety, reliability, and maximum savings.
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Professional EV Charger
+                        <span class="text-blue">Installation</span>
+                    </h1>
+                    <p class="hero-description">
+                        Get a custom quote for your electric vehicle charging station. 
+                        Professional installation, premium equipment, and exceptional service.
                     </p>
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>Save up to 60% on charging costs</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>Increase home value by £1,000+</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>Reduce carbon footprint significantly</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>Convenient overnight charging</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>OZEV grants and incentives available</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 mr-3"></i>
-                            <span>Professional installation guaranteed</span>
-                        </div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large" onclick="showQuoteAlert()">
+                            Get Free Quote
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                        <button class="btn-secondary btn-large">Learn More</button>
                     </div>
                 </div>
-                
-                <div class="benefits-cta-card">
-                    <div class="cta-card-icon">
-                        <i data-lucide="zap" class="w-12 h-12 text-blue-600"></i>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="pound-sterling" class="text-green"></i>
+                        </div>
+                        <h3 class="stat-value text-green">£350</h3>
+                        <h4 class="stat-label">OZEV Grant</h4>
+                        <p class="stat-description">Available for qualified installations</p>
                     </div>
-                    <h3 class="cta-card-title">Ready to Get Started?</h3>
-                    <p class="cta-card-description">
-                        Get your personalized quote in just 5 minutes. No obligations, 
-                        completely free assessment.
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="leaf" class="text-green"></i>
+                        </div>
+                        <h3 class="stat-value text-green">60%</h3>
+                        <h4 class="stat-label">Average Savings</h4>
+                        <p class="stat-description">Compared to gasoline costs</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="clock" class="text-blue"></i>
+                        </div>
+                        <h3 class="stat-value text-blue">2-4 Weeks</h3>
+                        <h4 class="stat-label">Installation Timeline</h4>
+                        <p class="stat-description">From quote to completion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose EVCharge Pro?</h2>
+                    <p class="section-description">
+                        Professional installation services with premium equipment and exceptional customer support.
                     </p>
-                    <a href="#quote-form" class="cta-card-button">Start Your Quote</a>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h3>Certified Installation</h3>
+                        <p>Licensed electricians with EV charging expertise and full insurance coverage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3>Professional Service</h3>
+                        <p>Complete installation including permits, inspections, and warranty support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Smart Technology</h3>
+                        <p>WiFi-enabled chargers with mobile app control and energy monitoring.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i data-lucide="star"></i>
+                        </div>
+                        <h3>Quality Equipment</h3>
+                        <p>Premium charging stations from trusted manufacturers with extended warranties.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container text-center">
-            <h2 class="final-cta-title">Ready to Make the Switch?</h2>
-            <p class="final-cta-description">
-                Get your free, no-obligation quote today and start saving on charging costs tomorrow.
-            </p>
-            <a href="#quote-form" class="final-cta-button">Get Your Free Quote Now</a>
-        </div>
-    </section>
-
-    <!-- Quote Form Section -->
-    <section id="quote-form" class="quote-section">
-        <div class="container">
-            <div class="quote-header text-center">
-                <h2 class="section-title">Get Your Personalised Quote</h2>
-                <p class="section-subtitle">Complete this simple form and we'll match you with certified installers in your area.</p>
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-content">
+                    <div class="benefits-text">
+                        <h2 class="section-title">
+                            Transform Your Home with
+                            <span class="text-green">EV Charging</span>
+                        </h2>
+                        <p class="section-description">
+                            Join thousands of homeowners who have made the switch to convenient, 
+                            cost-effective home charging. Our professional installation ensures 
+                            safety, reliability, and maximum savings.
+                        </p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Save up to 60% on fuel costs</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Increase home value by $1,000+</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Reduce carbon footprint significantly</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Convenient overnight charging</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Federal and state incentives available</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span>Professional installation guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-cta">
+                        <div class="cta-card">
+                            <div class="cta-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h3>Ready to Get Started?</h3>
+                            <p>
+                                Get your personalized quote in just 5 minutes. No obligations, 
+                                completely free assessment.
+                            </p>
+                            <button class="btn-primary" onclick="showQuoteAlert()">Start Your Quote</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <form class="quote-form" action="https://formspree.io/f/mqayalzl" method="POST">
-                <div class="form-group">
-                    <label for="email" class="form-label">Email Address *</label>
-                    <input type="email" id="email" name="email" class="form-input" required>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="final-cta-content">
+                    <h2>Ready to Make the Switch?</h2>
+                    <p>Get your free, no-obligation quote today and start saving on fuel costs tomorrow.</p>
+                    <button class="btn-white btn-large" onclick="showQuoteAlert()">Get Your Free Quote Now</button>
                 </div>
-                
-                <div class="form-group">
-                    <label for="property-type" class="form-label">Property Type *</label>
-                    <select id="property-type" name="property-type" class="form-input" required>
-                        <option value="">Select your property type</option>
-                        <option value="house">House</option>
-                        <option value="flat">Flat/Apartment</option>
-                        <option value="business">Business</option>
-                        <option value="landlord">Landlord</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="postcode" class="form-label">Postcode *</label>
-                    <input type="text" id="postcode" name="postcode" class="form-input" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="parking" class="form-label">Parking Type *</label>
-                    <select id="parking" name="parking" class="form-input" required>
-                        <option value="">Select your parking type</option>
-                        <option value="driveway">Driveway</option>
-                        <option value="garage">Garage</option>
-                        <option value="car-park">Car Park</option>
-                        <option value="street">Street Parking</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="form-submit">Get My Free Quote</button>
-                
-                <p class="form-note">By submitting this form, you agree to be contacted by our certified installer partners. We never share your data with third parties.</p>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <!-- Company Info -->
                 <div class="footer-section">
-                    <h3 class="footer-logo">EVQuote</h3>
-                    <p class="footer-description">Professional EV charger installation services across the UK.</p>
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h3>EVCharge Pro</h3>
+                            <p>Professional Installation</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Leading provider of professional EV charger installation services. 
+                        Certified electricians, quality equipment, and exceptional customer service.
+                    </p>
+                    <div class="social-links">
+                        <i data-lucide="facebook"></i>
+                        <i data-lucide="twitter"></i>
+                        <i data-lucide="linkedin"></i>
+                    </div>
                 </div>
+
+                <!-- Services -->
                 <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <a href="#quote-form" class="footer-link">Get Quote</a>
-                    <a href="#features" class="footer-link">Our Services</a>
-                    <a href="#benefits" class="footer-link">Benefits</a>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential Installation</a></li>
+                        <li><a href="#">Commercial Installation</a></li>
+                        <li><a href="#">Electrical Upgrades</a></li>
+                        <li><a href="#">Maintenance & Support</a></li>
+                        <li><a href="#">Permit Assistance</a></li>
+                    </ul>
                 </div>
+
+                <!-- Support -->
                 <div class="footer-section">
-                    <h4 class="footer-title">Contact</h4>
-                    <a href="mailto:hello@evquote.co.uk" class="footer-link">hello@evquote.co.uk</a>
-                    <p class="footer-text">OZEV Certified Installers</p>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Installation Guide</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">Troubleshooting</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>info@evchargepro.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>123 Electric Ave<br>San Francisco, CA 94105</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2024 EVQuote. All rights reserved.</p>
+                <p>&copy; 2024 EVCharge Pro. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
             </div>
         </div>
     </footer>
 
-       <script>
+    <script>
         // Initialize Lucide icons
         lucide.createIcons();
-        
+
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'block';
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
+        }
+
+        // Quote alert
+        function showQuoteAlert() {
+            alert('Quote page would open here! This is just a demo of the homepage.');
+        }
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation active state
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Close mobile menu if open
+                    const mobileNav = document.getElementById('mobile-nav');
+                    if (mobileNav.style.display === 'block') {
+                        toggleMobileMenu();
+                    }
+                });
+            });
         });
     </script>
 </body>
