@@ -763,3 +763,13 @@ body {
         gap: 1rem;
     }
 }
+/* Remove grey line under header */
+.header {
+    box-shadow: none;
+    border-bottom: none;
+}
+
+/* Ensure hero section touches header */
+.hero {
+    margin-top: 60px; /* Reduced from 70px */
+}
