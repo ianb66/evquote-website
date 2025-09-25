@@ -763,12 +763,8 @@ body {
         gap: 1rem;
     }
 }
-/* REMOVE HEADER SHADOW - TARGETS THE ACTUAL CAUSE */
+/* Clean professional header without shadow */
 .header {
     box-shadow: none !important;
-}
-
-/* Optional: Add a subtle border if you want a cleaner separation */
-.header {
-    border-bottom: 1px solid #f0f0f0 !important;
+    border-bottom: 1px solid #e5e7eb !important;
 }
