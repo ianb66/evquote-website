@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVQuote - Get Your Free EV Charger Quote | OZEV Certified Installers</title>
-    <meta name="description" content="Get your free, no-obligation EV charger quote. We connect you with certified OZEV installers in the UK. Grant-aware pricing in minutes.">
+    <title>EVQuote - Professional EV Charger Installation | Get Your Free Quote</title>
+    <meta name="description" content="Get your free, no-obligation EV charger quote. Certified OZEV installers, premium equipment, and grant-aware pricing. Professional UK installation service.">
     <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -13,9 +15,9 @@
         <nav class="nav">
             <div class="logo">EVQuote</div>
             <div class="nav-links">
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#benefits" class="nav-link">Why Choose Us</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#features" class="nav-link">Why Choose Us</a>
+                <a href="#benefits" class="nav-link">Benefits</a>
+                <a href="#quote-form" class="nav-link">Get Quote</a>
             </div>
         </nav>
     </header>
@@ -23,83 +25,205 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Get Your Free, No-Obligation EV Charger Quote</h1>
-            <p class="hero-subtitle">Confused by grants, installers, and costs? We simplify the process. Get matched with certified OZEV installers and receive a personalised quote for your home or business.</p>
+            <h1 class="hero-title">
+                Professional EV Charger
+                <span class="hero-title-accent"> Installation</span>
+            </h1>
+            <p class="hero-subtitle">
+                Get a custom quote for your electric vehicle charging station. 
+                Professional installation, premium equipment, and exceptional service.
+            </p>
             <div class="hero-buttons">
-                <a href="#quote-form" class="cta-button">Get My Quote Now</a>
-                <a href="#how-it-works" class="secondary-button">Learn More</a>
+                <a href="#quote-form" class="cta-button">
+                    Get Free Quote
+                    <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M5 12h14m-7-7l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#features" class="secondary-button">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="trust-section">
-        <div class="trust-content">
-            <p class="trust-text">Trusted by homeowners across the UK</p>
-            <div class="trust-badges">
-                <span class="trust-badge">OZEV Certified Partners</span>
-                <span class="trust-badge">Grant Experts</span>
-                <span class="trust-badge">Verified Installers</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="section">
+    <!-- Statistics Grid -->
+    <section class="statistics-section">
         <div class="container">
-            <h2 class="section-title">How It Works in 3 Simple Steps</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Tell Us Your Needs</h3>
-                    <p class="step-description">Answer a few quick questions about your property and charging requirements.</p>
+            <div class="statistics-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="stat-value">£350</h3>
+                    <h4 class="stat-label">OZEV Grant Available</h4>
+                    <p class="stat-description">For qualified homeowners</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">We Match You with Experts</h3>
-                    <p class="step-description">We connect you with 2-3 certified OZEV installers in your area.</p>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-value">60%</h3>
+                    <h4 class="stat-label">Average Savings</h4>
+                    <p class="stat-description">Compared to public charging</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Receive Your Quotes</h3>
-                    <p class="step-description">Get personalised, grant-aware quotes directly from the installers.</p>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="stat-value">2-4 Weeks</h3>
+                    <h4 class="stat-label">Installation Timeline</h4>
+                    <p class="stat-description">From quote to completion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose EVQuote?</h2>
+                <p class="section-subtitle">
+                    Professional installation services with premium equipment and exceptional customer support.
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Certified Installation</h3>
+                    <p class="feature-description">OZEV-certified electricians with EV charging expertise and full insurance coverage.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Professional Service</h3>
+                    <p class="feature-description">Complete installation including permits, inspections, and warranty support.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M13 2L3 14h6l-2 8 10-12h-6l2-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Technology</h3>
+                    <p class="feature-description">WiFi-enabled chargers with mobile app control and energy monitoring.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Quality Equipment</h3>
+                    <p class="feature-description">Premium charging stations from trusted manufacturers with extended warranties.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section id="benefits" class="section bg-light">
+    <section id="benefits" class="benefits-section">
         <div class="container">
-            <h2 class="section-title">Why Use EVQuote?</h2>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">💷</div>
-                    <h3 class="benefit-title">Save £350 with Grants</h3>
-                    <p class="benefit-description">We automatically check your eligibility for OZEV grants and include them in your quotes.</p>
+                <div class="benefits-content">
+                    <h2 class="benefits-title">
+                        Transform Your Home with
+                        <span class="benefits-title-accent"> EV Charging</span>
+                    </h2>
+                    <p class="benefits-description">
+                        Join thousands of homeowners who have made the switch to convenient, 
+                        cost-effective home charging. Our professional installation ensures 
+                        safety, reliability, and maximum savings.
+                    </p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Save up to 60% on charging costs</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Increase home value by £1,000+</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Reduce carbon footprint significantly</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Convenient overnight charging</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>OZEV grants and incentives available</span>
+                        </div>
+                        <div class="benefit-item">
+                            <svg class="benefit-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            <span>Professional installation guaranteed</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
-                    <h3 class="benefit-title">Certified Installers</h3>
-                    <p class="benefit-description">All our installers are OZEV-certified and thoroughly vetted for quality.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⏱️</div>
-                    <h3 class="benefit-title">Save Time & Effort</h3>
-                    <p class="benefit-description">No more calling multiple installers. Get all your quotes in one place.</p>
+                
+                <div class="benefits-cta">
+                    <div class="cta-card">
+                        <div class="cta-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M13 2L3 14h6l-2 8 10-12h-6l2-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="cta-title">Ready to Get Started?</h3>
+                        <p class="cta-description">
+                            Get your personalised quote in just 5 minutes. No obligations, 
+                            completely free assessment.
+                        </p>
+                        <a href="#quote-form" class="cta-button-secondary">Start Your Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Quote Form Section -->
-<section id="quote-form" class="section">
-    <div class="container">
-        <div class="form-container">
-            <h2 class="section-title">Get Your Personalised Quote</h2>
-            <p class="form-subtitle">Complete this simple form and we'll match you with certified installers in your area.</p>
+    <section id="quote-form" class="quote-section">
+        <div class="container">
+            <div class="quote-header">
+                <h2 class="section-title">Get Your Personalised Quote</h2>
+                <p class="section-subtitle">Complete this simple form and we'll match you with certified installers in your area.</p>
+            </div>
             
-            <form class="quote-form" action="https://formspree.io/f/mqayalzl" method="POST">
+            <form class="quote-form" action="https://formspree.io/f/YOUR-FORM-ID-HERE" method="POST">
                 <div class="form-group">
                     <label for="email" class="form-label">Email Address *</label>
                     <input type="email" id="email" name="email" class="form-input" required>
@@ -137,9 +261,19 @@
                 <p class="form-note">By submitting this form, you agree to be contacted by our certified installer partners. We never share your data with third parties.</p>
             </form>
         </div>
-    </div>
-</section>
-    
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta-title">Ready to Make the Switch?</h2>
+            <p class="final-cta-description">
+                Get your free, no-obligation quote today and start saving on charging costs tomorrow.
+            </p>
+            <a href="#quote-form" class="final-cta-button">Get Your Free Quote Now</a>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -150,7 +284,7 @@
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-subtitle">Quick Links</h4>
-                    <a href="#how-it-works" class="footer-link">How It Works</a>
+                    <a href="#features" class="footer-link">Why Choose Us</a>
                     <a href="#benefits" class="footer-link">Benefits</a>
                     <a href="#quote-form" class="footer-link">Get Quote</a>
                 </div>
@@ -165,5 +299,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
