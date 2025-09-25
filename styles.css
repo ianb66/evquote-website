@@ -763,13 +763,24 @@ body {
         gap: 1rem;
     }
 }
-/* Remove grey line under header */
+/* COMPLETE removal of header line and spacing */
 .header {
-    box-shadow: none;
-    border-bottom: none;
+    box-shadow: none !important;
+    border-bottom: none !important;
+    border: none !important;
+    outline: none !important;
 }
 
-/* Ensure hero section touches header */
 .hero {
-    margin-top: 60px; /* Reduced from 70px */
+    margin-top: 60px !important;
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+/* Remove any potential border from container elements */
+.header > *,
+.nav,
+.hero > * {
+    border: none !important;
+    box-shadow: none !important;
 }
