@@ -763,8 +763,14 @@ body {
         gap: 1rem;
     }
 }
-/* Clean professional header without shadow */
+/* Professional header with balanced spacing */
 .header {
     box-shadow: none !important;
     border-bottom: 1px solid #e5e7eb !important;
 }
+
+.hero {
+    padding-top: 3rem !important;
+    padding-bottom: 4rem !important;
+}
+
