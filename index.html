@@ -269,9 +269,14 @@
         </div>
     </footer>
 
-    <script>
+       <script>
         // Initialize Lucide icons
         lucide.createIcons();
+        
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
     </script>
 </body>
 </html>
