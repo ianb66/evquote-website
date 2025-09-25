@@ -763,24 +763,12 @@ body {
         gap: 1rem;
     }
 }
-/* COMPLETE removal of header line and spacing */
+/* REMOVE HEADER SHADOW - TARGETS THE ACTUAL CAUSE */
 .header {
     box-shadow: none !important;
-    border-bottom: none !important;
-    border: none !important;
-    outline: none !important;
 }
 
-.hero {
-    margin-top: 60px !important;
-    border-top: none !important;
-    padding-top: 0 !important;
-}
-
-/* Remove any potential border from container elements */
-.header > *,
-.nav,
-.hero > * {
-    border: none !important;
-    box-shadow: none !important;
+/* Optional: Add a subtle border if you want a cleaner separation */
+.header {
+    border-bottom: 1px solid #f0f0f0 !important;
 }
