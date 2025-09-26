@@ -274,56 +274,72 @@
         </div>
         
         <form action="https://formspree.io/f/mqayalzl" method="POST" class="quote-form">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="firstName">First Name *</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="lastName">Last Name *</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                
-                <div class="form-group">
-                    <label for="postcode">Postcode *</label>
-                    <input type="text" id="postcode" name="postcode" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="propertyType">Property Type</label>
-                    <select id="propertyType" name="propertyType">
-                        <option value="">Select property type</option>
-                        <option value="house">House</option>
-                        <option value="flat">Flat/Apartment</option>
-                        <option value="bungalow">Bungalow</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="vehicleInfo">EV Vehicle Information</label>
-                    <input type="text" id="vehicleInfo" name="vehicleInfo" placeholder="e.g., Tesla Model 3, BMW i3, etc.">
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="additionalInfo">Additional Information</label>
-                    <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Any specific requirements or questions?"></textarea>
-                </div>
-            </div>
-            
-            <button type="submit" class="form-submit-btn">Get My Free Quote</button>
-        </form>
+    <div class="form-grid">
+        <div class="form-group">
+            <label>
+                First Name *
+                <input type="text" name="firstName" required>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                Last Name *
+                <input type="text" name="lastName" required>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                Your email *
+                <input type="email" name="email" required>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                Phone Number
+                <input type="tel" name="phone">
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                Postcode *
+                <input type="text" name="postcode" required>
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                Property Type
+                <select name="propertyType">
+                    <option value="">Select property type</option>
+                    <option value="house">House</option>
+                    <option value="flat">Flat/Apartment</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+        </div>
+        
+        <div class="form-group full-width">
+            <label>
+                EV Vehicle Information
+                <input type="text" name="vehicleInfo" placeholder="e.g., Tesla Model 3, BMW i3, etc.">
+            </label>
+        </div>
+        
+        <div class="form-group full-width">
+            <label>
+                Your message
+                <textarea name="message" rows="4" placeholder="Any specific requirements or questions?"></textarea>
+            </label>
+        </div>
+    </div>
+    
+    <button type="submit">Get My Free Quote</button>
+</form>
     </div>
 </div>
 
