@@ -718,11 +718,11 @@ body {
     color: white;
 }
 
-.footer-logo-text h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: white;
+.footer-logo-text p {
+    font-size: 0.875rem;
+    color: #9ca3af;
     line-height: 1;
+    margin-top: 0.5rem;
 }
 
 .footer-logo-text p {
