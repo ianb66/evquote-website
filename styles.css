@@ -1007,8 +1007,7 @@ a:focus {
     color: #374151;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
 .form-group input,
@@ -1019,6 +1018,8 @@ a:focus {
     border-radius: 0.5rem;
     font-size: 1rem;
     transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -1032,9 +1033,10 @@ a:focus {
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
+    font-family: inherit;
 }
 
-.form-submit-btn {
+.quote-form button[type="submit"] {
     width: 100%;
     background: #2563eb;
     color: white;
@@ -1048,7 +1050,7 @@ a:focus {
     margin-top: 1rem;
 }
 
-.form-submit-btn:hover {
+.quote-form button[type="submit"]:hover {
     background: #1d4ed8;
     transform: translateY(-1px);
 }
@@ -1063,5 +1065,9 @@ a:focus {
     .quote-form-header,
     .quote-form {
         padding: 1.5rem;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 }
