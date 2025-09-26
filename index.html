@@ -603,6 +603,28 @@
                 });
             }
         }
+
+        function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+    
+    // Close all other FAQ items
+    const allFaqItems = document.querySelectorAll('.faq-item');
+    allFaqItems.forEach(item => {
+        if (item !== faqItem) {
+            const otherAnswer = item.querySelector('.faq-answer');
+            const otherQuestion = item.querySelector('.faq-question');
+            otherAnswer.classList.remove('open');
+            otherQuestion.classList.remove('active');
+        }
+    });
+    
+    // Toggle current FAQ item
+    answer.classList.toggle('open');
+    element.classList.toggle('active');
+}
+        
     </script>
 </body>
 </html>
