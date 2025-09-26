@@ -259,6 +259,7 @@
             </div>
         </section>
     </main>
+    
     <!-- Quote Form Modal/Section -->
 <div id="quote-form" class="quote-form-overlay hidden">
     <div class="quote-form-container">
@@ -453,10 +454,15 @@
         }
 
         function showQuote() {
-            updateActiveNav('quote');
-            alert('Quote form would open here');
-        }
+    document.getElementById('quote-form').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+}
 
+        function closeQuoteForm() {
+    document.getElementById('quote-form').classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore scroll
+}
+        
         function showNews() {
             updateActiveNav('news');
             alert('EV News page would load here');
