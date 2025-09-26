@@ -1007,6 +1007,8 @@ a:focus {
     color: #374151;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group input,
