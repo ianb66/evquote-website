@@ -56,7 +56,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    height: 5rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .header-content {
+        padding: 0 1.5rem;
+    }
 }
 
 .logo {
@@ -74,35 +81,38 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     background: #2563eb;
-    border-radius: 0.5rem;
-    margin-right: 0.75rem;
+    border-radius: 0.75rem;
+    margin-right: 1rem;
 }
 
-.logo-icon i {
-    width: 1.5rem;
-    height: 1.5rem;
+.logo-icon svg {
+    width: 1.75rem;
+    height: 1.75rem;
     color: white;
 }
 
 .logo-text h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #111827;
-    line-height: 1;
+    line-height: 1.2;
+    margin: 0;
 }
 
 .logo-text p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: #6b7280;
     line-height: 1;
+    margin: 0;
+    margin-top: 0.125rem;
 }
 
 .desktop-nav {
     display: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -112,8 +122,8 @@ body {
 }
 
 .nav-btn {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #374151;
     background: none;
@@ -145,9 +155,10 @@ body {
 .cta-btn {
     background: #2563eb;
     color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     transition: all 0.2s;
@@ -155,6 +166,7 @@ body {
 
 .cta-btn:hover {
     background: #1d4ed8;
+    transform: translateY(-1px);
 }
 
 .mobile-menu-btn {
@@ -173,39 +185,47 @@ body {
     border: none;
     cursor: pointer;
     transition: color 0.2s;
+    padding: 0.5rem;
 }
 
 .mobile-menu-btn button:hover {
     color: #2563eb;
 }
 
-.mobile-menu-btn i {
+.mobile-menu-btn svg {
     width: 1.5rem;
     height: 1.5rem;
 }
 
 .mobile-nav {
     border-top: 1px solid #f3f4f6;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 .mobile-nav-content {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .mobile-nav-content {
+        padding: 0 1.5rem;
+    }
 }
 
 .mobile-nav-btn {
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem 1rem;
     text-align: left;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #374151;
     background: none;
     border: none;
     cursor: pointer;
     transition: all 0.2s;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
 
 .mobile-nav-btn:hover {
@@ -222,9 +242,10 @@ body {
     margin-top: 1rem;
     background: #2563eb;
     color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     transition: all 0.2s;
