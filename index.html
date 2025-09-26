@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVCharge Pro UK - Professional EV Charger Installation</title>
+    <title>EVQuote Pro UK - Professional EV Charger Installation</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Using inline SVG icons instead of CDN -->
 </head>
@@ -20,7 +20,7 @@
                         </svg>
                     </div>
                     <div class="logo-text">
-                        <h1>EVCharge Pro</h1>
+                        <h1>EVQuote Pro</h1>
                         <p>Professional Installation</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 <!-- Desktop Navigation -->
                 <nav class="desktop-nav">
                     <button class="nav-btn active" onclick="showHome()">Home</button>
-                    <button class="nav-btn" onclick="showQuote()">Get Quote</button>
+                    <button class="nav-btn" onclick="showNews()">EV News</button>
                     <button class="nav-btn" onclick="showAbout()">About</button>
                     <button class="nav-btn" onclick="showContact()">Contact</button>
                 </nav>
@@ -58,7 +58,7 @@
             <div class="mobile-nav hidden">
                 <div class="mobile-nav-content">
                     <button class="mobile-nav-btn active" onclick="showHome(); closeMobileMenu()">Home</button>
-                    <button class="mobile-nav-btn" onclick="showQuote(); closeMobileMenu()">Get Quote</button>
+                    <button class="mobile-nav-btn" onclick="showNews(); closeMobileMenu()">EV News</button>
                     <button class="mobile-nav-btn" onclick="showAbout(); closeMobileMenu()">About</button>
                     <button class="mobile-nav-btn" onclick="showContact(); closeMobileMenu()">Contact</button>
                     <button class="mobile-cta-btn" onclick="showQuote(); closeMobileMenu()">Get Free Quote</button>
@@ -78,7 +78,10 @@
                     <div class="hero-buttons">
                         <button class="btn-primary" onclick="showQuote()">
                             Get Free Quote
-                            <i data-lucide="arrow-right"></i>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12,5 19,12 12,19"/>
+                            </svg>
                         </button>
                         <button class="btn-secondary">Learn More</button>
                     </div>
@@ -92,7 +95,10 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon">
-                            <i data-lucide="pound-sterling"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value green">£350</h3>
                         <h4 class="stat-label">OZEV Grant</h4>
@@ -100,7 +106,10 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">
-                            <i data-lucide="leaf"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 13l3 3 7-7"/>
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value green">60%</h3>
                         <h4 class="stat-label">Average Savings</h4>
@@ -108,7 +117,10 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">
-                            <i data-lucide="clock"></i>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value blue">2-4 Weeks</h3>
                         <h4 class="stat-label">Installation Timeline</h4>
@@ -122,35 +134,43 @@
         <section class="features">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Choose EVCharge Pro?</h2>
+                    <h2>Why Choose EVQuote Pro?</h2>
                     <p>Professional installation services with premium equipment and exceptional customer support across the UK.</p>
                 </div>
                 
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i data-lucide="shield"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
                         </div>
                         <h3>Certified Installation</h3>
                         <p>NICEIC approved electricians with EV charging expertise and full insurance coverage.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i data-lucide="wrench"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
                         </div>
                         <h3>Professional Service</h3>
                         <p>Complete installation including DNO applications, inspections, and warranty support.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i data-lucide="zap"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
                         </div>
                         <h3>Smart Technology</h3>
                         <p>WiFi-enabled chargers with mobile app control and energy monitoring.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i data-lucide="star"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/>
+                            </svg>
                         </div>
                         <h3>Quality Equipment</h3>
                         <p>Premium charging stations from trusted manufacturers with extended warranties.</p>
@@ -168,27 +188,45 @@
                         <p>Join thousands of UK homeowners who have made the switch to convenient, cost-effective home charging. Our professional installation ensures safety, reliability, and maximum savings.</p>
                         <div class="benefits-list">
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>Save up to 60% on fuel costs</span>
                             </div>
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>Increase home value by £1,000+</span>
                             </div>
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>Reduce carbon footprint significantly</span>
                             </div>
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>Convenient overnight charging</span>
                             </div>
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>OZEV grants and local incentives available</span>
                             </div>
                             <div class="benefit-item">
-                                <i data-lucide="check-circle" class="benefit-icon"></i>
+                                <svg class="benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
                                 <span>Professional installation guaranteed</span>
                             </div>
                         </div>
@@ -196,7 +234,9 @@
                     <div class="benefits-cta">
                         <div class="cta-card">
                             <div class="cta-icon">
-                                <i data-lucide="zap"></i>
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                                </svg>
                             </div>
                             <h3>Ready to Get Started?</h3>
                             <p>Get your personalised quote in just 5 minutes. No obligations, completely free assessment.</p>
@@ -227,18 +267,28 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <div class="footer-logo-icon">
-                            <i data-lucide="zap"></i>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                            </svg>
                         </div>
                         <div class="footer-logo-text">
-                            <h3>EVCharge Pro</h3>
+                            <h3>EVQuote Pro</h3>
                             <p>Professional Installation</p>
                         </div>
                     </div>
                     <p class="footer-description">Leading provider of professional EV charger installation services across the UK. NICEIC approved electricians, quality equipment, and exceptional customer service.</p>
                     <div class="social-links">
-                        <i data-lucide="facebook" class="social-icon"></i>
-                        <i data-lucide="twitter" class="social-icon"></i>
-                        <i data-lucide="linkedin" class="social-icon"></i>
+                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                        </svg>
+                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
                     </div>
                 </div>
 
@@ -271,15 +321,23 @@
                     <h4>Contact</h4>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i data-lucide="phone" class="contact-icon"></i>
+                            <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
                             <span>0800 123 4567</span>
                         </div>
                         <div class="contact-item">
-                            <i data-lucide="mail" class="contact-icon"></i>
-                            <span>info@evchargepro.co.uk</span>
+                            <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>info@evquote.co.uk</span>
                         </div>
                         <div class="contact-item">
-                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
                             <span>123 Electric House<br>London, SW1A 1AA</span>
                         </div>
                     </div>
@@ -289,7 +347,7 @@
             <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>© 2024 EVCharge Pro UK. All rights reserved.</p>
+                    <p>© 2024 EVQuote Pro UK. All rights reserved.</p>
                     <div class="footer-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
@@ -330,6 +388,11 @@
         function showQuote() {
             updateActiveNav('quote');
             alert('Quote form would open here');
+        }
+
+        function showNews() {
+            updateActiveNav('news');
+            alert('EV News page would load here');
         }
 
         function showAbout() {
