@@ -8,6 +8,64 @@
     <!-- Using inline SVG icons instead of CDN -->
 </head>
 <body>
+    
+    <!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="position:fixed;bottom:0;left:0;width:100%;background:#333;color:#fff;padding:15px;z-index:9999;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;font-family:sans-serif;">
+  <div style="flex:1;min-width:250px;">
+    We use cookies to improve your experience, analyse site usage, and personalise content. 
+    By clicking “Accept Cookies,” you agree to our use of cookies. 
+    You can manage your preferences or reject non-essential cookies.
+  </div>
+  <div style="flex-shrink:0;display:flex;gap:10px;flex-wrap:wrap;margin-top:5px;">
+    <button id="acceptCookies" style="background:#4caf50;color:white;border:none;padding:10px 15px;cursor:pointer;border-radius:4px;">Accept Cookies</button>
+    <button id="rejectCookies" style="background:#f44336;color:white;border:none;padding:10px 15px;cursor:pointer;border-radius:4px;">Reject Non-Essential</button>
+    <button id="customizeCookies" style="background:#555;color:white;border:none;padding:10px 15px;cursor:pointer;border-radius:4px;">Cookie Settings</button>
+  </div>
+</div>
+
+<script>
+  // Simple cookie consent logic
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+  }
+
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) return match[2];
+    return null;
+  }
+
+  function hideBanner() {
+    document.getElementById('cookieConsent').style.display = 'none';
+  }
+
+  // On page load, check if consent given
+  window.onload = function() {
+    const consent = getCookie('site_cookie_consent');
+    if (consent === 'accepted' || consent === 'rejected') {
+      hideBanner();
+    }
+  };
+
+  document.getElementById('acceptCookies').onclick = function() {
+    setCookie('site_cookie_consent', 'accepted', 365);
+    hideBanner();
+    // Here you could trigger enabling analytics/tracking scripts
+  };
+
+  document.getElementById('rejectCookies').onclick = function() {
+    setCookie('site_cookie_consent', 'rejected', 365);
+    hideBanner();
+    // Disable non-essential cookies/scripts here
+  };
+
+  document.getElementById('customizeCookies').onclick = function() {
+    alert('Cookie preferences panel would open here.');
+    // Implement your preferences UI here
+  };
+</script>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
