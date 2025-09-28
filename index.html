@@ -3,19 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional EV charger installation across the UK. Get free quotes, OZEV grant assistance, and certified installation services.">
     <title>EVQuote Pro UK - Professional EV Charger Installation</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Using inline SVG icons instead of CDN -->
-    
+    <!-- Structured data for local business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "EVQuote Pro UK",
+        "description": "Professional EV charger installation services across the UK",
+        "url": "https://evquotepro.co.uk",
+        "telephone": "0800 123 4567",
+        "email": "info@evquotepro.co.uk",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Electric House",
+            "addressLocality": "London",
+            "postalCode": "SW1A 1AA",
+            "addressCountry": "UK"
+        },
+        "areaServed": "UK",
+        "serviceType": "EV Charger Installation"
+    }
+    </script>
 </head>
 <body>
-    
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
                 <!-- Logo -->
-                <div class="logo" onclick="showHome()">
+                <div class="logo" onclick="showHome()" role="button" aria-label="EVQuote Pro Home" tabindex="0">
                     <div class="logo-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
@@ -28,7 +47,7 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <nav class="desktop-nav">
+                <nav class="desktop-nav" aria-label="Main navigation">
                     <button class="nav-btn active" onclick="showHome()">Home</button>
                     <button class="nav-btn" onclick="showNews()">EV News</button>
                     <button class="nav-btn" onclick="showAbout()">About</button>
@@ -42,7 +61,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="mobile-menu-btn">
-                    <button onclick="toggleMobileMenu()">
+                    <button onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
                         <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="3" y1="6" x2="21" y2="6"/>
                             <line x1="3" y1="12" x2="21" y2="12"/>
@@ -57,7 +76,7 @@
             </div>
 
             <!-- Mobile Navigation -->
-            <div class="mobile-nav hidden">
+            <div class="mobile-nav hidden" id="mobile-nav">
                 <div class="mobile-nav-content">
                     <button class="mobile-nav-btn active" onclick="showHome(); closeMobileMenu()">Home</button>
                     <button class="mobile-nav-btn" onclick="showNews(); closeMobileMenu()">EV News</button>
@@ -72,10 +91,10 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Professional EV Charger <span class="text-accent">Installation</span></h1>
+                    <h1 id="hero-title">Professional EV Charger <span class="text-accent">Installation</span></h1>
                     <p class="hero-text">Get a custom quote for your electric vehicle charging station. Professional installation, premium equipment, and exceptional service across the UK.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary" onclick="showQuote()">
@@ -85,23 +104,24 @@
                                 <polyline points="12,5 19,12 12,19"/>
                             </svg>
                         </button>
-                        <button class="btn-secondary">Learn More</button>
+                        <button class="btn-secondary" onclick="scrollToSection('features')">Learn More</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Statistics Grid -->
-        <section class="statistics">
+        <section class="statistics" aria-labelledby="stats-title">
             <div class="container">
+                <h2 id="stats-title" class="sr-only">Installation Benefits</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M6 3v12a6 6 0 0 0 12 0V3"/>
-    <path d="M6 21h12"/>
-    <path d="M10 18h4"/>
-</svg>
+                                <path d="M6 3v12a6 6 0 0 0 12 0V3"/>
+                                <path d="M6 21h12"/>
+                                <path d="M10 18h4"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value green">£350</h3>
                         <h4 class="stat-label">OZEV Grant</h4>
@@ -110,9 +130,9 @@
                     <div class="stat-card">
                         <div class="stat-icon">
                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
-    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-</svg>
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value green">60%</h3>
                         <h4 class="stat-label">Average Savings</h4>
@@ -121,9 +141,9 @@
                     <div class="stat-card">
                         <div class="stat-icon">
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="10"/>
-    <polyline points="12,6 12,12 16,14"/>
-</svg>
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
                         </div>
                         <h3 class="stat-value blue">2-4 Weeks</h3>
                         <h4 class="stat-label">Installation Timeline</h4>
@@ -134,13 +154,13 @@
         </section>
 
         <!-- Features Grid -->
-        <section class="features">
+        <section class="features" id="features" aria-labelledby="features-title">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Choose EVQuote Pro?</h2>
+                    <h2 id="features-title">Why Choose EVQuote Pro?</h2>
                     <p>Professional installation services with premium equipment and exceptional customer support across the UK.</p>
                 </div>
-                
+
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">
@@ -183,11 +203,11 @@
         </section>
 
         <!-- Benefits Section -->
-        <section class="benefits">
+        <section class="benefits" aria-labelledby="benefits-title">
             <div class="container">
                 <div class="benefits-content">
                     <div class="benefits-text">
-                        <h2>Transform Your Home with <span class="text-green">EV Charging</span></h2>
+                        <h2 id="benefits-title">Transform Your Home with <span class="text-green">EV Charging</span></h2>
                         <p>Join thousands of UK homeowners who have made the switch to convenient, cost-effective home charging. Our professional installation ensures safety, reliability, and maximum savings.</p>
                         <div class="benefits-list">
                             <div class="benefit-item">
@@ -251,16 +271,16 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="faq-section">
+        <section class="faq-section" aria-labelledby="faq-title">
             <div class="container">
                 <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
+                    <h2 id="faq-title">Frequently Asked Questions</h2>
                     <p>Get answers to the most common questions about EV charger installation in the UK.</p>
                 </div>
-                
+
                 <div class="faq-container">
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>How much does it cost to install an EV charger at home?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -272,7 +292,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>How long does the installation process take?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -284,7 +304,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>What is the OZEV grant and am I eligible?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -296,7 +316,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>Do I need planning permission for an EV charger?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -308,7 +328,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>What happens if my electrical system needs upgrading?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -320,7 +340,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>Can I install a charger if I rent my property?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -332,7 +352,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>How fast will my EV charge at home?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -344,7 +364,7 @@
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question" onclick="toggleFAQ(this)">
+                        <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
                             <span>What warranty do you provide?</span>
                             <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="6,9 12,15 18,9"/>
@@ -357,59 +377,64 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Final CTA Section -->
-        <section class="final-cta">
+        <section class="final-cta" aria-labelledby="final-cta-title">
             <div class="container">
                 <div class="final-cta-content">
-                    <h2>Ready to Make the Switch?</h2>
+                    <h2 id="final-cta-title">Ready to Make the Switch?</h2>
                     <p>Get your free, no-obligation quote today and start saving on fuel costs tomorrow.</p>
                     <button class="btn-white" onclick="showQuote()">Get Your Free Quote Now</button>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <!-- Quote Form Modal/Section -->
-<div id="quote-form" class="quote-form-overlay hidden">
+<div id="quote-form" class="quote-form-overlay hidden" role="dialog" aria-labelledby="quote-form-title" aria-modal="true">
     <div class="quote-form-container">
         <div class="quote-form-header">
-            <h2>Get Your Free EV Charger Quote</h2>
-            <button class="close-form-btn" onclick="closeQuoteForm()">
+            <h2 id="quote-form-title">Get Your Free EV Charger Quote</h2>
+            <button class="close-form-btn" onclick="closeQuoteForm()" aria-label="Close quote form">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"/>
                     <line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
             </button>
         </div>
-        
-        <form action="https://formspree.io/f/mqayalzl" method="POST" class="quote-form">
+
+        <form action="https://formspree.io/f/mqayalzl" method="POST" class="quote-form" id="quoteForm">
     <div class="form-grid">
         <div class="form-group">
             <label for="firstName">First Name *</label>
-            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="firstName" name="firstName" required aria-required="true">
+            <div class="validation-message" id="firstName-error"></div>
         </div>
-        
+
         <div class="form-group">
             <label for="lastName">Last Name *</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input type="text" id="lastName" name="lastName" required aria-required="true">
+            <div class="validation-message" id="lastName-error"></div>
         </div>
-        
+
         <div class="form-group">
             <label for="email">Your email *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-required="true">
+            <div class="validation-message" id="email-error"></div>
         </div>
-        
+
         <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone">
+            <div class="validation-message" id="phone-error"></div>
         </div>
-        
+
         <div class="form-group">
             <label for="postcode">Postcode *</label>
-            <input type="text" id="postcode" name="postcode" required>
+            <input type="text" id="postcode" name="postcode" required aria-required="true">
+            <div class="validation-message" id="postcode-error"></div>
         </div>
-        
+
         <div class="form-group">
             <label for="propertyType">Property Type</label>
             <select id="propertyType" name="propertyType">
@@ -420,26 +445,29 @@
                 <option value="other">Other</option>
             </select>
         </div>
-        
+
         <div class="form-group full-width">
             <label for="vehicleInfo">EV Vehicle Information</label>
             <input type="text" id="vehicleInfo" name="vehicleInfo" placeholder="e.g., Tesla Model 3, BMW i3, etc.">
         </div>
-        
+
         <div class="form-group full-width">
             <label for="message">Your message</label>
             <textarea id="message" name="message" rows="4" placeholder="Any specific requirements or questions?"></textarea>
         </div>
     </div>
-    
-    <button type="submit" class="form-submit-btn">Get My Free Quote</button>
+
+    <button type="submit" class="form-submit-btn" id="submit-btn">
+        <span class="btn-text">Get My Free Quote</span>
+        <span class="btn-loading hidden">Processing...</span>
+    </button>
 </form>
-        
+
     </div>
 </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <!-- Company Info -->
@@ -457,17 +485,23 @@
                     </div>
                     <p class="footer-description">Leading provider of professional EV charger installation services across the UK. NICEIC approved electricians, quality equipment, and exceptional customer service.</p>
                     <div class="social-links">
-                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
-                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                        </svg>
-                        <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
+                        <a href="#" aria-label="Facebook">
+                            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
@@ -510,7 +544,7 @@
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                 <polyline points="22,6 12,13 2,6"/>
                             </svg>
-                            <span>info@evquote.co.uk</span>
+                            <span>info@evquotepro.co.uk</span>
                         </div>
                         <div class="contact-item">
                             <svg class="contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -526,7 +560,7 @@
             <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>© 2025 EVQuote Pro UK. All rights reserved.</p>
+                    <p>© 2024 EVQuote Pro UK. All rights reserved.</p>
                     <div class="footer-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
@@ -543,37 +577,51 @@
             const mobileNav = document.querySelector('.mobile-nav');
             const menuIcon = document.querySelector('.menu-icon');
             const closeIcon = document.querySelector('.close-icon');
-            
+            const menuBtn = document.querySelector('.mobile-menu-btn button');
+
             mobileNav.classList.toggle('hidden');
             menuIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
+            
+            // Update aria-expanded
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', !isExpanded);
         }
 
         function closeMobileMenu() {
             const mobileNav = document.querySelector('.mobile-nav');
             const menuIcon = document.querySelector('.menu-icon');
             const closeIcon = document.querySelector('.close-icon');
-            
+            const menuBtn = document.querySelector('.mobile-menu-btn button');
+
             mobileNav.classList.add('hidden');
             menuIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
         }
 
-        // Navigation functionality (placeholder)
+        // Navigation functionality
         function showHome() {
             updateActiveNav('home');
         }
 
         function showQuote() {
-    document.getElementById('quote-form').classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
-}
+            const quoteForm = document.getElementById('quote-form');
+            quoteForm.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Set focus to the first input
+            setTimeout(() => {
+                document.getElementById('firstName').focus();
+            }, 100);
+        }
 
         function closeQuoteForm() {
-    document.getElementById('quote-form').classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Restore scroll
-}
-        
+            const quoteForm = document.getElementById('quote-form');
+            quoteForm.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
         function showNews() {
             updateActiveNav('news');
             alert('EV News page would load here');
@@ -594,7 +642,7 @@
             document.querySelectorAll('.nav-btn, .mobile-nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            
+
             // This would typically update based on the actual page shown
             // For now, just highlight the home button
             if (page === 'home') {
@@ -607,286 +655,76 @@
         }
 
         function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const answer = element.nextElementSibling;
-    const icon = element.querySelector('.faq-icon');
-    
-    // Close all other FAQ items
-    const allFaqItems = document.querySelectorAll('.faq-item');
-    allFaqItems.forEach(item => {
-        if (item !== faqItem) {
-            const otherAnswer = item.querySelector('.faq-answer');
-            const otherQuestion = item.querySelector('.faq-question');
-            otherAnswer.classList.remove('open');
-            otherQuestion.classList.remove('active');
+            const faqItem = element.parentElement;
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            const isExpanded = element.getAttribute('aria-expanded') === 'true';
+
+            // Close all other FAQ items
+            const allFaqItems = document.querySelectorAll('.faq-item');
+            allFaqItems.forEach(item => {
+                if (item !== faqItem) {
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    const otherQuestion = item.querySelector('.faq-question');
+                    otherAnswer.classList.remove('open');
+                    otherQuestion.classList.remove('active');
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current FAQ item
+            answer.classList.toggle('open');
+            element.classList.toggle('active');
+            element.setAttribute('aria-expanded', !isExpanded);
         }
-    });
-    
-    // Toggle current FAQ item
-    answer.classList.toggle('open');
-    element.classList.toggle('active');
-}
-      
-<!-- Cookie Banner -->
-<div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-content">
-        <div class="cookie-text">
-            <h3>We value your privacy</h3>
-            <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences at any time.</p>
-        </div>
-        <div class="cookie-buttons">
-            <button class="cookie-btn cookie-btn-manage" data-action="manage">Manage Preferences</button>
-            <button class="cookie-btn cookie-btn-reject" data-action="reject">Reject All</button>
-            <button class="cookie-btn cookie-btn-accept" data-action="accept">Accept All</button>
-        </div>
-    </div>
-</div>
 
-<!-- Cookie Settings Modal -->
-<div id="cookie-settings" class="cookie-settings-overlay hidden">
-    <div class="cookie-settings-modal">
-        <div class="cookie-settings-header">
-            <h2>Cookie Preferences</h2>
-            <button class="close-settings-btn" data-action="close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="18" y1="6" x2="6" y2="18"/>
-                    <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-            </button>
-        </div>
-        
-        <div class="cookie-settings-content">
-            <p class="cookie-settings-intro">We use cookies to improve your experience on our website. You can choose which categories of cookies you'd like to allow.</p>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Form validation
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Essential Cookies</h4>
-                    <span class="cookie-status always-active">Always Active</span>
-                </div>
-                <p>These cookies are necessary for the website to function and cannot be switched off.</p>
-            </div>
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
             
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Analytics Cookies</h4>
-                    <label class="cookie-toggle">
-                        <input type="checkbox" id="analytics-cookies" checked>
-                        <span class="cookie-slider"></span>
-                    </label>
-                </div>
-                <p>These cookies help us understand how visitors interact with our website.</p>
-            </div>
+            // Show loading state
+            btnText.classList.add('hidden');
+            btnLoading.classList.remove('hidden');
+            submitBtn.disabled = true;
             
-            <div class="cookie-category">
-                <div class="cookie-category-header">
-                    <h4>Marketing Cookies</h4>
-                    <label class="cookie-toggle">
-                        <input type="checkbox" id="marketing-cookies">
-                        <span class="cookie-slider"></span>
-                    </label>
-                </div>
-                <p>These cookies are used to deliver advertisements more relevant to you.</p>
-            </div>
-        </div>
-        
-        <div class="cookie-settings-footer">
-            <button class="cookie-btn cookie-btn-manage" data-action="cancel">Cancel</button>
-            <button class="cookie-btn cookie-btn-accept" data-action="save">Save Preferences</button>
-        </div>
-    </div>
-</div>
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset loading state
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+                submitBtn.disabled = false;
+                
+                // Show success message
+                alert('Thank you! Your quote request has been submitted. We will contact you within 24 hours.');
+                closeQuoteForm();
+                this.reset();
+            }, 2000);
+        });
 
-    <script>
-// Mobile menu functionality
-function toggleMobileMenu() {
-    const mobileNav = document.querySelector('.mobile-nav');
-    const menuIcon = document.querySelector('.menu-icon');
-    const closeIcon = document.querySelector('.close-icon');
-    
-    mobileNav.classList.toggle('hidden');
-    menuIcon.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-}
-
-function closeMobileMenu() {
-    const mobileNav = document.querySelector('.mobile-nav');
-    const menuIcon = document.querySelector('.menu-icon');
-    const closeIcon = document.querySelector('.close-icon');
-    
-    mobileNav.classList.add('hidden');
-    menuIcon.classList.remove('hidden');
-    closeIcon.classList.add('hidden');
-}
-
-// Navigation functionality
-function showHome() {
-    updateActiveNav('home');
-}
-
-function showQuote() {
-    document.getElementById('quote-form').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeQuoteForm() {
-    document.getElementById('quote-form').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
-
-function showNews() {
-    updateActiveNav('news');
-    alert('EV News page would load here');
-}
-
-function showAbout() {
-    updateActiveNav('about');
-    alert('About page would load here');
-}
-
-function showContact() {
-    updateActiveNav('contact');
-    alert('Contact page would load here');
-}
-
-function updateActiveNav(page) {
-    document.querySelectorAll('.nav-btn, .mobile-nav-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    if (page === 'home') {
-        document.querySelectorAll('.nav-btn').forEach(btn => {
-            if (btn.textContent.trim() === 'Home') {
-                btn.classList.add('active');
+        // Close modal when clicking outside
+        document.getElementById('quote-form').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeQuoteForm();
             }
         });
-    }
-}
 
-// FAQ functionality
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const answer = element.nextElementSibling;
-    
-    const allFaqItems = document.querySelectorAll('.faq-item');
-    allFaqItems.forEach(item => {
-        if (item !== faqItem) {
-            const otherAnswer = item.querySelector('.faq-answer');
-            const otherQuestion = item.querySelector('.faq-question');
-            otherAnswer.classList.remove('open');
-            otherQuestion.classList.remove('active');
-        }
-    });
-    
-    answer.classList.toggle('open');
-    element.classList.toggle('active');
-}
-
-// Cookie Banner Functions - CSP Compliant
-document.addEventListener('DOMContentLoaded', function() {
-    // Add event listeners for cookie buttons
-    const cookieBanner = document.getElementById('cookie-banner');
-    const cookieSettings = document.getElementById('cookie-settings');
-    
-    if (cookieBanner) {
-        cookieBanner.addEventListener('click', function(e) {
-            const action = e.target.getAttribute('data-action');
-            if (action === 'accept') acceptAllCookies();
-            if (action === 'reject') rejectCookies();
-            if (action === 'manage') showCookieSettings();
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeQuoteForm();
+            }
         });
-    }
-    
-    if (cookieSettings) {
-        cookieSettings.addEventListener('click', function(e) {
-            const action = e.target.getAttribute('data-action');
-            if (action === 'close' || action === 'cancel') closeCookieSettings();
-            if (action === 'save') saveCustomCookies();
-        });
-    }
-    
-    // Check existing consent
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent) {
-        const consentData = JSON.parse(consent);
-        const oneYear = 365 * 24 * 60 * 60 * 1000;
-        if (Date.now() - consentData.timestamp < oneYear) {
-            hideCookieBanner();
-            if (consentData.analytics) loadAnalytics();
-            if (consentData.marketing) loadMarketing();
-            return;
-        }
-    }
-    
-    // Show banner if no valid consent
-    if (cookieBanner) {
-        cookieBanner.style.display = 'block';
-    }
-});
-
-function acceptAllCookies() {
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: true,
-        marketing: true,
-        timestamp: Date.now()
-    }));
-    hideCookieBanner();
-    loadAnalytics();
-    loadMarketing();
-}
-
-function rejectCookies() {
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: false,
-        marketing: false,
-        timestamp: Date.now()
-    }));
-    hideCookieBanner();
-}
-
-function showCookieSettings() {
-    document.getElementById('cookie-settings').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeCookieSettings() {
-    document.getElementById('cookie-settings').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
-
-function saveCustomCookies() {
-    const analytics = document.getElementById('analytics-cookies').checked;
-    const marketing = document.getElementById('marketing-cookies').checked;
-    
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: analytics,
-        marketing: marketing,
-        timestamp: Date.now()
-    }));
-    
-    hideCookieBanner();
-    closeCookieSettings();
-    
-    if (analytics) loadAnalytics();
-    if (marketing) loadMarketing();
-}
-
-function hideCookieBanner() {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) {
-        banner.style.display = 'none';
-    }
-}
-
-function loadAnalytics() {
-    console.log('Analytics cookies enabled');
-}
-
-function loadMarketing() {
-    console.log('Marketing cookies enabled');
-}
-</script>
+    </script>
 </body>
 </html>
