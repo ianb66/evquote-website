@@ -684,5 +684,48 @@
 }
         
     </script>
+<!-- Cookie Consent Banner -->
+<div id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Cookie consent banner">
+  <p>
+    We use cookies to improve your experience, analyse site usage, and personalise content. By clicking “Accept Cookies,” you consent to our use of cookies. You can also reject non-essential cookies or customise your preferences.
+    <a href="/cookie-policy.html" target="_blank">Cookie Policy</a>
+    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+  </p>
+  <div class="btn-group">
+    <button id="acceptCookiesBtn" aria-label="Accept all cookies">Accept</button>
+    <button id="rejectCookiesBtn" aria-label="Reject non-essential cookies">Reject</button>
+    <button id="customizeCookiesBtn" aria-haspopup="dialog" aria-controls="cookiePreferencesModal">Customise</button>
+  </div>
+</div>
+
+<!-- Cookie Preferences Modal -->
+<div id="cookiePreferencesModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1" style="display:none;">
+  <div class="modal-content">
+    <button class="close-btn" id="modalCloseBtn" aria-label="Close cookie settings">&times;</button>
+    <h2 id="modalTitle">Cookie Preferences</h2>
+    <form id="cookiePreferencesForm">
+      <label>
+        <input type="checkbox" id="essentialCookies" checked disabled />
+        Essential Cookies (required)
+      </label>
+      <p class="desc">These cookies are necessary for basic website functions and cannot be switched off.</p>
+      <label>
+        <input type="checkbox" id="analyticsCookies" />
+        Analytics Cookies
+      </label>
+      <p class="desc">Help us understand how visitors use our website.</p>
+      <label>
+        <input type="checkbox" id="marketingCookies" />
+        Marketing Cookies
+      </label>
+      <p class="desc">Used for personalised ads and marketing campaigns.</p>
+      <div class="modal-buttons">
+        <button type="button" class="cancel-btn" id="cancelPreferencesBtn">Cancel</button>
+        <button type="submit" class="save-btn">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 </body>
 </html>
