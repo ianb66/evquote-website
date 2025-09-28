@@ -235,16 +235,6 @@ body {
     border-bottom-color: var(--primary-blue);
 }
 
-.desktop-cta {
-    display: none;
-}
-
-@media (min-width: 768px) {
-    .desktop-cta {
-        display: block;
-    }
-}
-
 .cta-btn {
     background: var(--primary-blue);
     color: white;
