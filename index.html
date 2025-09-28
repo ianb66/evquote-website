@@ -626,84 +626,7 @@
     answer.classList.toggle('open');
     element.classList.toggle('active');
 }
-        // Cookie Banner Functions
-function acceptAllCookies() {
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: true,
-        marketing: true,
-        timestamp: Date.now()
-    }));
-    hideCookieBanner();
-    loadAnalytics();
-    loadMarketing();
-}
-
-function rejectCookies() {
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: false,
-        marketing: false,
-        timestamp: Date.now()
-    }));
-    hideCookieBanner();
-}
-
-function showCookieSettings() {
-    document.getElementById('cookie-settings').classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeCookieSettings() {
-    document.getElementById('cookie-settings').classList.add('hidden');
-    document.body.style.overflow = 'auto';
-}
-
-function saveCustomCookies() {
-    const analytics = document.getElementById('analytics-cookies').checked;
-    const marketing = document.getElementById('marketing-cookies').checked;
-    
-    localStorage.setItem('cookieConsent', JSON.stringify({
-        essential: true,
-        analytics: analytics,
-        marketing: marketing,
-        timestamp: Date.now()
-    }));
-    
-    hideCookieBanner();
-    closeCookieSettings();
-    
-    if (analytics) loadAnalytics();
-    if (marketing) loadMarketing();
-}
-
-function hideCookieBanner() {
-    const banner = document.getElementById('cookie-banner');
-    if (banner) {
-        banner.style.display = 'none';
-    }
-}
-
-// Check if user has already given consent
-document.addEventListener('DOMContentLoaded', function() {
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent) {
-        const consentData = JSON.parse(consent);
-        // Check if consent is less than 1 year old
-        const oneYear = 365 * 24 * 60 * 60 * 1000;
-        if (Date.now() - consentData.timestamp < oneYear) {
-            hideCookieBanner();
-            if (consentData.analytics) loadAnalytics();
-            if (consentData.marketing) loadMarketing();
-            return;
-        }
-    }
-    
-    // Show banner if no valid consent found
-    document.getElementById('cookie-banner').style.display = 'block';
-});
-        
-</script>
+      
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-content">
@@ -773,9 +696,6 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 </div>
 
-    <script>
-        // Your JavaScript functions here
-    </script>
     <script>
 // Mobile menu functionality
 function toggleMobileMenu() {
