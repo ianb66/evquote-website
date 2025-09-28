@@ -683,6 +683,56 @@
   <button id="acceptCookiesBtn">Accept</button>
   <button id="rejectCookiesBtn">Reject</button>
 </div>
+<script>
+  // Helper functions to set and get cookies
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+    }
+    return null;
+  }
+
+  // When the page loads
+  window.onload = function () {
+    var consentBanner = document.getElementById('cookieConsent');
+    var consent = getCookie('cookiesAccepted');
+
+    if (!consent) {
+      consentBanner.style.display = 'block';
+    } else {
+      consentBanner.style.display = 'none';
+    }
+
+    // Attach event handlers for Accept and Reject buttons
+    document.getElementById('acceptCookiesBtn').onclick = function () {
+      setCookie('cookiesAccepted', 'true', 365);
+      consentBanner.style.display = 'none';
+      console.log('Cookies accepted');
+      // Add tracking enabling code here if needed
+    };
+
+    document.getElementById('rejectCookiesBtn').onclick = function () {
+      setCookie('cookiesAccepted', 'false', 365);
+      consentBanner.style.display = 'none';
+      console.log('Cookies rejected');
+      // Add tracking disabling code here if needed
+    };
+  };
+</script>
 
 </body>
 </html>
