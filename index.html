@@ -704,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
         
 </script>
- <!-- Cookie Banner -->
+<!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
     <div class="cookie-content">
         <div class="cookie-text">
@@ -712,9 +712,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences at any time.</p>
         </div>
         <div class="cookie-buttons">
-            <button class="cookie-btn cookie-btn-manage" onclick="showCookieSettings()">Manage Preferences</button>
-            <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Reject All</button>
-            <button class="cookie-btn cookie-btn-accept" onclick="acceptAllCookies()">Accept All</button>
+            <button class="cookie-btn cookie-btn-manage" data-action="manage">Manage Preferences</button>
+            <button class="cookie-btn cookie-btn-reject" data-action="reject">Reject All</button>
+            <button class="cookie-btn cookie-btn-accept" data-action="accept">Accept All</button>
         </div>
     </div>
 </div>
@@ -724,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="cookie-settings-modal">
         <div class="cookie-settings-header">
             <h2>Cookie Preferences</h2>
-            <button class="close-settings-btn" onclick="closeCookieSettings()">
+            <button class="close-settings-btn" data-action="close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"/>
                     <line x1="6" y1="6" x2="18" y2="18"/>
@@ -740,7 +740,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>Essential Cookies</h4>
                     <span class="cookie-status always-active">Always Active</span>
                 </div>
-                <p>These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions made by you such as setting your privacy preferences or filling in forms.</p>
+                <p>These cookies are necessary for the website to function and cannot be switched off.</p>
             </div>
             
             <div class="cookie-category">
@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="cookie-slider"></span>
                     </label>
                 </div>
-                <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website performance.</p>
+                <p>These cookies help us understand how visitors interact with our website.</p>
             </div>
             
             <div class="cookie-category">
@@ -762,13 +762,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="cookie-slider"></span>
                     </label>
                 </div>
-                <p>These cookies are used to deliver advertisements more relevant to you and your interests. They may also be used to limit the number of times you see an advertisement.</p>
+                <p>These cookies are used to deliver advertisements more relevant to you.</p>
             </div>
         </div>
         
         <div class="cookie-settings-footer">
-            <button class="cookie-btn cookie-btn-manage" onclick="closeCookieSettings()">Cancel</button>
-            <button class="cookie-btn cookie-btn-accept" onclick="saveCustomCookies()">Save Preferences</button>
+            <button class="cookie-btn cookie-btn-manage" data-action="cancel">Cancel</button>
+            <button class="cookie-btn cookie-btn-accept" data-action="save">Save Preferences</button>
         </div>
     </div>
 </div>
@@ -776,5 +776,197 @@ document.addEventListener('DOMContentLoaded', function() {
     <script>
         // Your JavaScript functions here
     </script>
+    <script>
+// Mobile menu functionality
+function toggleMobileMenu() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    
+    mobileNav.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+}
+
+function closeMobileMenu() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    
+    mobileNav.classList.add('hidden');
+    menuIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+}
+
+// Navigation functionality
+function showHome() {
+    updateActiveNav('home');
+}
+
+function showQuote() {
+    document.getElementById('quote-form').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeQuoteForm() {
+    document.getElementById('quote-form').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function showNews() {
+    updateActiveNav('news');
+    alert('EV News page would load here');
+}
+
+function showAbout() {
+    updateActiveNav('about');
+    alert('About page would load here');
+}
+
+function showContact() {
+    updateActiveNav('contact');
+    alert('Contact page would load here');
+}
+
+function updateActiveNav(page) {
+    document.querySelectorAll('.nav-btn, .mobile-nav-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    if (page === 'home') {
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            if (btn.textContent.trim() === 'Home') {
+                btn.classList.add('active');
+            }
+        });
+    }
+}
+
+// FAQ functionality
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const answer = element.nextElementSibling;
+    
+    const allFaqItems = document.querySelectorAll('.faq-item');
+    allFaqItems.forEach(item => {
+        if (item !== faqItem) {
+            const otherAnswer = item.querySelector('.faq-answer');
+            const otherQuestion = item.querySelector('.faq-question');
+            otherAnswer.classList.remove('open');
+            otherQuestion.classList.remove('active');
+        }
+    });
+    
+    answer.classList.toggle('open');
+    element.classList.toggle('active');
+}
+
+// Cookie Banner Functions - CSP Compliant
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners for cookie buttons
+    const cookieBanner = document.getElementById('cookie-banner');
+    const cookieSettings = document.getElementById('cookie-settings');
+    
+    if (cookieBanner) {
+        cookieBanner.addEventListener('click', function(e) {
+            const action = e.target.getAttribute('data-action');
+            if (action === 'accept') acceptAllCookies();
+            if (action === 'reject') rejectCookies();
+            if (action === 'manage') showCookieSettings();
+        });
+    }
+    
+    if (cookieSettings) {
+        cookieSettings.addEventListener('click', function(e) {
+            const action = e.target.getAttribute('data-action');
+            if (action === 'close' || action === 'cancel') closeCookieSettings();
+            if (action === 'save') saveCustomCookies();
+        });
+    }
+    
+    // Check existing consent
+    const consent = localStorage.getItem('cookieConsent');
+    if (consent) {
+        const consentData = JSON.parse(consent);
+        const oneYear = 365 * 24 * 60 * 60 * 1000;
+        if (Date.now() - consentData.timestamp < oneYear) {
+            hideCookieBanner();
+            if (consentData.analytics) loadAnalytics();
+            if (consentData.marketing) loadMarketing();
+            return;
+        }
+    }
+    
+    // Show banner if no valid consent
+    if (cookieBanner) {
+        cookieBanner.style.display = 'block';
+    }
+});
+
+function acceptAllCookies() {
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: true,
+        marketing: true,
+        timestamp: Date.now()
+    }));
+    hideCookieBanner();
+    loadAnalytics();
+    loadMarketing();
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: false,
+        marketing: false,
+        timestamp: Date.now()
+    }));
+    hideCookieBanner();
+}
+
+function showCookieSettings() {
+    document.getElementById('cookie-settings').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCookieSettings() {
+    document.getElementById('cookie-settings').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function saveCustomCookies() {
+    const analytics = document.getElementById('analytics-cookies').checked;
+    const marketing = document.getElementById('marketing-cookies').checked;
+    
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: analytics,
+        marketing: marketing,
+        timestamp: Date.now()
+    }));
+    
+    hideCookieBanner();
+    closeCookieSettings();
+    
+    if (analytics) loadAnalytics();
+    if (marketing) loadMarketing();
+}
+
+function hideCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+}
+
+function loadAnalytics() {
+    console.log('Analytics cookies enabled');
+}
+
+function loadMarketing() {
+    console.log('Marketing cookies enabled');
+}
+</script>
 </body>
 </html>
