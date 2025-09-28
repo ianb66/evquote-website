@@ -518,7 +518,7 @@
                         <li><a href="#">Installation Guide</a></li>
                         <li><a href="#">Warranty Information</a></li>
                         <li><a href="#">Troubleshooting</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq-title" onclick="scrollToFAQ()">FAQ</a></li>
                         <li><a href="#">Contact Support</a></li>
                     </ul>
                 </div>
@@ -554,7 +554,7 @@
             <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>© 2024 EVQuote Pro UK. All rights reserved.</p>
+                    <p>© 2025 EVQuote UK. All rights reserved.</p>
                     <div class="footer-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
@@ -719,6 +719,16 @@
                 closeQuoteForm();
             }
         });
+
+        function scrollToFAQ() {
+    const faqSection = document.querySelector('.faq-section');
+    if (faqSection) {
+        faqSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close mobile menu if open
+    closeMobileMenu();
+}
     </script>
 </body>
 </html>
