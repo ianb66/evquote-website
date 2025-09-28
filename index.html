@@ -726,6 +726,78 @@
     </form>
   </div>
 </div>
+<script>
+  // Helper: set cookie
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+    document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+  }
+
+  // Helper: get cookie by name
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  // Show/Hide modal functions
+  function openModal() {
+    document.getElementById('cookiePreferencesModal').style.display = 'block';
+    document.getElementById('cookiePreferencesModal').focus();
+  }
+  
+  function closeModal() {
+    document.getElementById('cookiePreferencesModal').style.display = 'none';
+  }
+
+  // Save preferences from modal checkboxes as cookie JSON string
+  function savePreferences(e) {
+    e.preventDefault();
+    const prefs = {
+      essential: true,
+      analytics: document.getElementById('analyticsCookies').checked,
+      marketing: document.getElementById('marketingCookies').checked
+    };
+    setCookie('cookieConsentPrefs', JSON.stringify(prefs), 365);
+    closeModal();
+    hideBanner();
+  }
+
+  // Hide banner
+  function hideBanner() {
+    document.getElementById('cookieConsentBanner').style.display = 'none';
+  }
+
+  // Accept all cookies
+  function acceptAll() {
+    setCookie('cookieConsentPrefs', JSON.stringify({ essential: true, analytics: true, marketing: true }), 365);
+    hideBanner();
+  }
+
+  // Reject all except essential
+  function rejectAll() {
+    setCookie('cookieConsentPrefs', JSON.stringify({ essential: true, analytics: false, marketing: false }), 365);
+    hideBanner();
+  }
+
+  // On page load: check cookie and banner visibility
+  document.addEventListener('DOMContentLoaded', () => {
+    const consent = getCookie('cookieConsentPrefs');
+    if (consent) {
+      hideBanner();
+    } else {
+      // Show banner if no consent cookie found
+      document.getElementById('cookieConsentBanner').style.display = 'flex';
+    }
+
+    // Event listeners
+    document.getElementById('acceptCookiesBtn').addEventListener('click', acceptAll);
+    document.getElementById('rejectCookiesBtn').addEventListener('click', rejectAll);
+    document.getElementById('customizeCookiesBtn').addEventListener('click', openModal);
+    document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
+    document.getElementById('cancelPreferencesBtn').addEventListener('click', closeModal);
+    document.getElementById('cookiePreferencesForm').addEventListener('submit', savePreferences);
+  });
+</script>
 
 </body>
 </html>
