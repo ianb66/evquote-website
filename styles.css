@@ -1462,4 +1462,101 @@ textarea:focus {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+    
+/* Legal Pages Styling */
+.legal-page {
+    padding: var(--space-16) 0;
+    background: var(--bg-primary);
+    min-height: 60vh;
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-content h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+}
+
+.last-updated {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-8);
+    font-size: var(--font-size-sm);
+}
+
+.legal-content section {
+    margin-bottom: var(--space-10);
+}
+
+.legal-content h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 2px solid var(--gray-100);
+}
+
+.legal-content section:first-of-type h2 {
+    border-top: none;
+    padding-top: 0;
+}
+
+.legal-content h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+    margin-top: var(--space-5);
+}
+
+.legal-content p {
+    margin-bottom: var(--space-4);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.legal-content ul, .legal-content ol {
+    margin-bottom: var(--space-4);
+    padding-left: var(--space-8);
+}
+
+.legal-content li {
+    margin-bottom: var(--space-2);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.legal-content a {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
+.legal-content a:hover {
+    color: var(--primary-blue-dark);
+}
+
+.legal-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .legal-content h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .legal-content h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .legal-content ul, .legal-content ol {
+        padding-left: var(--space-5);
+    }
+}
 }
