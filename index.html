@@ -729,6 +729,144 @@
     // Close mobile menu if open
     closeMobileMenu();
 }
-    </script>
+        // Cookie Consent Management
+function checkCookieConsent() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+        document.getElementById('cookie-consent').classList.remove('hidden');
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: true,
+        marketing: true,
+        timestamp: new Date().toISOString()
+    }));
+    document.getElementById('cookie-consent').classList.add('hidden');
+    // Initialize analytics and marketing scripts here
+    initializeAnalytics();
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: false,
+        marketing: false,
+        timestamp: new Date().toISOString()
+    }));
+    document.getElementById('cookie-consent').classList.add('hidden');
+}
+
+function showCookieSettings() {
+    document.getElementById('cookie-settings-modal').classList.remove('hidden');
+    // Load current preferences
+    const consent = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
+    document.getElementById('analytics-cookies').checked = consent.analytics || false;
+    document.getElementById('marketing-cookies').checked = consent.marketing || false;
+}
+
+function closeCookieSettings() {
+    document.getElementById('cookie-settings-modal').classList.add('hidden');
+}
+
+function saveCustomCookies() {
+    const analyticsConsent = document.getElementById('analytics-cookies').checked;
+    const marketingConsent = document.getElementById('marketing-cookies').checked;
+    
+    localStorage.setItem('cookieConsent', JSON.stringify({
+        essential: true,
+        analytics: analyticsConsent,
+        marketing: marketingConsent,
+        timestamp: new Date().toISOString()
+    }));
+    
+    document.getElementById('cookie-consent').classList.add('hidden');
+    document.getElementById('cookie-settings-modal').classList.add('hidden');
+    
+    if (analyticsConsent) {
+        initializeAnalytics();
+    }
+}
+
+function initializeAnalytics() {
+    // Add your Google Analytics or other analytics code here
+    console.log('Analytics initialized');
+}
+
+// Check cookie consent on page load
+window.addEventListener('DOMContentLoaded', checkCookieConsent);
+    </script>    
 </body>
+    <!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent hidden">
+    <div class="cookie-consent-content">
+        <div class="cookie-consent-text">
+            <h3>We Value Your Privacy</h3>
+            <p>We use cookies to enhance your browsing experience, analyze site traffic, and improve our services. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <button onclick="acceptCookies()" class="cookie-btn cookie-accept">Accept All</button>
+            <button onclick="rejectCookies()" class="cookie-btn cookie-reject">Reject Non-Essential</button>
+            <button onclick="showCookieSettings()" class="cookie-btn cookie-settings">Cookie Settings</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookie-settings-modal" class="cookie-modal hidden">
+    <div class="cookie-modal-content">
+        <div class="cookie-modal-header">
+            <h2>Cookie Preferences</h2>
+            <button onclick="closeCookieSettings()" class="close-modal-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cookie-modal-body">
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div>
+                        <h4>Essential Cookies</h4>
+                        <p>Required for the website to function properly. Cannot be disabled.</p>
+                    </div>
+                    <label class="cookie-toggle disabled">
+                        <input type="checkbox" checked disabled>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div>
+                        <h4>Analytics Cookies</h4>
+                        <p>Help us understand how visitors interact with our website.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="analytics-cookies">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="cookie-category">
+                <div class="cookie-category-header">
+                    <div>
+                        <h4>Marketing Cookies</h4>
+                        <p>Used to track visitors and display personalized ads.</p>
+                    </div>
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="marketing-cookies">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="cookie-modal-footer">
+            <button onclick="saveCustomCookies()" class="cookie-btn cookie-accept">Save Preferences</button>
+        </div>
+    </div>
+</div>
 </html>
